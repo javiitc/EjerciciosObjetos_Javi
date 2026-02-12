@@ -8,7 +8,12 @@ public class Main {
         Cartas c1 = new Cartas("Creador pétreo", 3, "", "Criatura",
                 "Unir Almas", "?", "Chamán humano", "Wesley Burt",
                 1, 1);
+        Cartas c2 = new Cartas();
 
         Cartas.infoCarta(c1);
+
+        Cartas.registrarCarta(c2, sc);
+
+        Cartas.mostrarCartaRegistrada(c2);
     }
 }
