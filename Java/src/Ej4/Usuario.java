@@ -5,20 +5,20 @@ import java.util.ArrayList;
 public class Usuario {
 
     String nombreUsuario;
-    String correoElectronico;
+    String email;
     String tipoCuenta; // "gratuita" o "premium"
     String fechaRegistro;
     ArrayList<Cancion> playlist;
 
-    public Usuario(String nombreUsuario, String correoElectronico, String tipoCuenta, String fechaRegistro) {
+    public Usuario(String nombreUsuario, String email, String tipoCuenta, String fechaRegistro) {
         this.nombreUsuario = nombreUsuario;
-        this.correoElectronico = correoElectronico;
+        this.email = email;
         this.tipoCuenta = tipoCuenta;
         this.fechaRegistro = fechaRegistro;
         this.playlist = new ArrayList<Cancion>();
     }
 
-    public static void añadirCancion(Usuario u, Cancion c) {
+    public static void agregarCancion(Usuario u, Cancion c) {
         u.playlist.add(c);
         System.out.println("Canción \"" + c.titulo + "\" añadida a la playlist de " + u.nombreUsuario);
     }
@@ -37,7 +37,7 @@ public class Usuario {
 
     public static void infoUsuario(Usuario u) {
         System.out.println("Usuario: " + u.nombreUsuario);
-        System.out.println("Correo: " + u.correoElectronico);
+        System.out.println("Correo: " + u.email);
         System.out.println("Tipo de cuenta: " + u.tipoCuenta);
         System.out.println("Fecha de registro: " + u.fechaRegistro);
         System.out.println("Canciones en playlist: " + u.playlist.size());
